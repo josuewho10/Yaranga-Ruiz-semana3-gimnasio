@@ -1,317 +1,812 @@
 <!doctype html>
-<html lang="es">
+<html lang="es" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- PASO 1: SEO Meta Tags -->
-    <title>Iron Pulse Gym | Transforma tu Cuerpo Hoy</title>
     <meta
       name="description"
-      content="Gimnasio de alto rendimiento. Planes de entrenamiento personalizadas, rutinas modernas y la mejor comunidad fitness."
+      content="Iron Pulse Gym - Centro de entrenamiento de alto rendimiento, clases exclusivas y nutrición personalizada."
     />
-    <meta
-      name="keywords"
-      content="gimnasio, fitness, rutinas, entrenamiento, pesas, salud, membresias"
-    />
-    <meta name="author" content="Yaranga Ruiz" />
-    <meta name="robots" content="index, follow" />
-
-    <!-- CDNs Oficiales -->
+    <title>Iron Pulse Gym | Alto Rendimiento</title>
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
     />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+    <style>
+      .hero-bg {
+        background:
+          linear-gradient(
+            to bottom,
+            rgba(15, 23, 42, 0.8),
+            rgba(15, 23, 42, 0.98)
+          ),
+          url("https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1470&auto=format&fit=crop");
+        background-size: cover;
+        background-position: center;
+      }
+      .card-glow:hover {
+        border-color: rgba(245, 158, 11, 0.6);
+        box-shadow: 0 10px 30px -10px rgba(245, 158, 11, 0.25);
+      }
+    </style>
   </head>
-  <body class="bg-gray-900 text-white min-h-screen">
-    <!-- PASO 2: Navbar Responsivo Híbrido -->
+  <body class="bg-slate-950 text-slate-100 font-sans antialiased">
     <nav
-      class="navbar navbar-expand-lg navbar-dark bg-dark/80 backdrop-blur-md shadow-lg sticky-top py-3"
+      class="navbar navbar-expand-lg navbar-dark bg-slate-900/90 backdrop-blur fixed-top border-b border-slate-800 py-3 z-50"
     >
       <div class="container">
         <a
-          class="navbar-brand text-2xl font-bold tracking-wider text-red-500 uppercase d-flex align-items-center gap-2"
+          class="navbar-brand font-black text-2xl tracking-wider text-amber-500 uppercase flex items-center gap-2"
           href="#"
         >
-          ⚡ Iron Pulse
+          <i class="bi bi-lightning-charge-fill"></i> Iron Pulse
         </a>
         <button
-          class="navbar-toggler border-0 focus:shadow-none"
+          class="navbar-toggler border-0"
           type="button"
           data-bs-toggle="collapse"
-          data-bs-target="#navbarContent"
-          aria-controls="navbarContent"
-          aria-expanded="false"
-          aria-label="Abrir menú de navegación"
+          data-bs-target="#navbarNav"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-
-        <div class="collapse navbar-collapse" id="navbarContent">
+        <div class="collapse navbar-collapse" id="navbarNav">
           <ul
-            class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center gap-2"
+            class="navbar-nav ms-auto gap-3 font-semibold text-xs uppercase tracking-wider"
           >
             <li class="nav-item">
-              <a class="nav-link active hover:text-red-500" href="#inicio"
+              <a
+                class="nav-link text-slate-300 hover:text-amber-500 transition"
+                href="#inicio"
                 >Inicio</a
               >
             </li>
-            <li class="nav-item dropdown">
+            <li class="nav-item">
               <a
-                class="nav-link dropdown-toggle hover:text-red-500"
-                href="#"
-                id="rutinasDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
+                class="nav-link text-slate-300 hover:text-amber-500 transition"
+                href="#programas"
                 >Programas</a
               >
-              <ul
-                class="dropdown-menu dropdown-menu-dark bg-gray-800 border-gray-700 shadow-xl"
-                aria-labelledby="rutinasDropdown"
-              >
-                <li>
-                  <a class="dropdown-item hover:bg-red-600" href="#"
-                    >Hipertrofia</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item hover:bg-red-600" href="#"
-                    >Crossfit & Cardio</a
-                  >
-                </li>
-              </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link hover:text-red-500" href="#planes">Planes</a>
-            </li>
-            <li class="nav-item position-relative my-2 my-lg-0 ms-lg-2">
-              <button
-                type="button"
-                class="btn btn-outline-light btn-sm rounded-full position-relative px-3 py-1"
-                aria-label="Ver promociones activas"
+              <a
+                class="nav-link text-slate-300 hover:text-amber-500 transition"
+                href="#instalaciones"
+                >Instalaciones</a
               >
-                🔔 Promos
-                <span
-                  class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
-                  >NEW</span
-                >
-              </button>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-slate-300 hover:text-amber-500 transition"
+                href="#horarios"
+                >Horarios</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-slate-300 hover:text-amber-500 transition"
+                href="#planes"
+                >Planes</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-slate-300 hover:text-amber-500 transition"
+                href="#testimonios"
+                >Testimonios</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-slate-300 hover:text-amber-500 transition"
+                href="#contacto"
+                >Contacto</a
+              >
             </li>
           </ul>
         </div>
       </div>
     </nav>
 
-    <!-- PASO 3: Hero Section -->
-    <section
+    <header
       id="inicio"
-      class="hero-section position-relative py-20 bg-gradient-to-r from-gray-900 via-red-950 to-black overflow-hidden"
+      class="hero-bg min-h-screen flex items-center pt-20 pb-12"
     >
-      <div class="container position-relative z-10">
-        <div class="row align-items-center">
-          <div class="col-lg-8 mx-auto text-center">
-            <span
-              class="inline-block bg-red-600/20 text-red-500 border border-red-500/30 px-4 py-1.5 rounded-full text-sm font-semibold tracking-wide uppercase mb-4"
+      <div class="container py-12">
+        <div class="row items-center g-5">
+          <div class="col-lg-7 text-center text-lg-start">
+            <div
+              class="inline-flex items-center gap-2 bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 px-3 py-1 text-xs font-bold uppercase tracking-widest rounded-full mb-4"
             >
-              🔥 El gimnasio #1 de la ciudad
-            </span>
-            <h1
-              class="display-3 fw-bold tracking-tight text-balance text-white mb-4"
-            >
-              CONSTRUYE TU MEJOR
               <span
-                class="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-orange-500"
-                >VERSIÓN HOY</span
-              >
+                class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"
+              ></span>
+              Abierto Ahora • 06:00 - 23:00 hrs
+            </div>
+            <h1
+              class="text-4xl sm:text-6xl font-black text-white tracking-tight uppercase leading-none mb-4"
+            >
+              Supera tus <span class="text-amber-500">Límites</span> Físicos
             </h1>
-            <p class="lead text-gray-300 max-w-3xl mx-auto mb-5">
-              Equipamiento de nivel profesional, entrenadores certificados y un
-              ambiente diseñado para llevar tu rendimiento físico al siguiente
-              nivel.
+            <p
+              class="text-base sm:text-lg text-slate-300 max-w-xl mb-8 leading-relaxed"
+            >
+              Equipamiento biomecánico de élite, entrenadores certificados y
+              programas personalizados para maximizar tu masa muscular y
+              resistencia.
             </p>
             <div
-              class="d-flex flex-column flex-sm-row justify-content-center gap-3"
+              class="flex flex-col sm:flex-row justify-center justify-lg-start gap-3"
             >
-              <a
-                href="#contacto"
-                class="btn btn-danger btn-lg px-4 py-3 fw-semibold shadow-lg hover:scale-105 transition-transform"
-                >Empezar Ahora</a
-              >
               <a
                 href="#planes"
-                class="btn btn-outline-light btn-lg px-4 py-3 fw-semibold hover:bg-white hover:text-black transition-colors"
-                >Ver Planes</a
+                class="btn btn-warning font-bold uppercase tracking-wider px-6 py-3 bg-amber-500 hover:bg-amber-400 text-slate-950 border-0 rounded-xl"
+                >Elegir Mi Plan</a
               >
+              <a
+                href="#contacto"
+                class="btn btn-outline-light font-bold uppercase tracking-wider px-6 py-3 border-slate-700 hover:bg-slate-800 rounded-xl"
+                >Clase de Prueba Gratis</a
+              >
+            </div>
+            <div
+              class="row pt-8 mt-8 border-t border-slate-800/80 text-center text-sm-start"
+            >
+              <div class="col-4">
+                <h4 class="text-2xl font-black text-amber-500 mb-0">+1200</h4>
+                <p class="text-xs text-slate-400 uppercase font-semibold">
+                  Atletas Activos
+                </p>
+              </div>
+              <div class="col-4">
+                <h4 class="text-2xl font-black text-amber-500 mb-0">100%</h4>
+                <p class="text-xs text-slate-400 uppercase font-semibold">
+                  Maquinaria Pro
+                </p>
+              </div>
+              <div class="col-4">
+                <h4 class="text-2xl font-black text-amber-500 mb-0">24/7</h4>
+                <p class="text-xs text-slate-400 uppercase font-semibold">
+                  Acceso Premium
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-5 hidden lg:block">
+            <div class="relative">
+              <img
+                src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?q=80&w=700&auto=format&fit=crop"
+                alt="Atleta Iron Pulse Gym"
+                class="rounded-3xl border border-slate-800 shadow-2xl object-cover h-[450px] w-full"
+              />
+              <div
+                class="absolute -bottom-6 -left-6 bg-slate-900/90 backdrop-blur border border-slate-800 p-4 rounded-2xl flex items-center gap-3 shadow-xl"
+              >
+                <i class="bi bi-trophy-fill text-3xl text-amber-500"></i>
+                <div>
+                  <p class="text-xs font-bold text-white mb-0">
+                    Certificación Internacional
+                  </p>
+                  <p class="text-[10px] text-slate-400 mb-0">
+                    Coaches IFBB & Crossfit L3
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </header>
 
-    <!-- PASO 4: Grid de Tarjetas -->
-    <section id="planes" class="py-20 bg-gray-900">
+    <section id="programas" class="py-16 bg-slate-900">
       <div class="container">
         <div class="text-center mb-12">
-          <h2 class="text-3xl font-bold tracking-tight text-white mb-2">
-            NUESTROS PLANES
+          <span
+            class="text-amber-500 text-xs font-bold uppercase tracking-widest"
+            >Especialidades</span
+          >
+          <h2
+            class="text-2xl sm:text-3xl font-extrabold text-white uppercase mt-1"
+          >
+            Programas de Entrenamiento
           </h2>
-          <p class="text-gray-400">
-            Selecciona el plan que mejor se adapte a tus metas
-          </p>
         </div>
         <div class="row g-4">
-          <div class="col-12 col-md-4">
+          <div class="col-md-4">
             <div
-              class="bg-gray-800 border border-gray-700 rounded-xl p-6 shadow-lg hover:scale-105 transition-transform duration-300 h-full d-flex flex-column justify-content-between"
+              class="bg-slate-950 rounded-2xl border border-slate-800 overflow-hidden card-glow transition duration-300 h-100 flex flex-col"
             >
-              <div>
-                <h3 class="text-xl font-bold text-white mb-2">Plan Básico</h3>
-                <p class="text-3xl font-extrabold text-red-500 mb-4">
-                  $29<span class="text-sm font-normal text-gray-400">/mes</span>
+              <img
+                src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?q=80&w=600&auto=format&fit=crop"
+                alt="Entrenamiento de Hipertrofia y Fuerza"
+                class="w-full h-44 object-cover"
+              />
+              <div class="p-5 flex flex-col flex-grow">
+                <div class="flex items-center gap-2 mb-2">
+                  <i class="bi bi-fire text-amber-500 text-xl"></i>
+                  <h3 class="text-lg font-bold text-white mb-0">
+                    Hipertrofia & Fuerza
+                  </h3>
+                </div>
+                <p class="text-slate-400 text-xs leading-relaxed mb-0">
+                  Rutinas progresivas enfocadas en ganancia muscular pura y
+                  levantamiento de potencia con técnica estricta.
                 </p>
-                <ul class="text-gray-300 space-y-2 mb-6 list-unstyled">
-                  <li>✓ Acceso a área de pesas</li>
-                  <li>✓ Vestidores y duchas</li>
-                </ul>
               </div>
-              <button type="button" class="btn btn-outline-danger w-100">
-                Seleccionar
-              </button>
             </div>
           </div>
-          <div class="col-12 col-md-4">
+          <div class="col-md-4">
             <div
-              class="bg-gray-800 border-2 border-red-500 rounded-xl p-6 shadow-lg hover:scale-105 transition-transform duration-300 h-full d-flex flex-column justify-content-between relative"
+              class="bg-slate-950 rounded-2xl border border-slate-800 overflow-hidden card-glow transition duration-300 h-100 flex flex-col"
             >
-              <div>
-                <span
-                  class="bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase absolute -top-3 right-4"
-                  >Popular</span
-                >
-                <h3 class="text-xl font-bold text-white mb-2">Plan VIP</h3>
-                <p class="text-3xl font-extrabold text-red-500 mb-4">
-                  $49<span class="text-sm font-normal text-gray-400">/mes</span>
+              <img
+                src="https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=600&auto=format&fit=crop"
+                alt="Entrenamiento Cardio y HIIT"
+                class="w-full h-44 object-cover"
+              />
+              <div class="p-5 flex flex-col flex-grow">
+                <div class="flex items-center gap-2 mb-2">
+                  <i class="bi bi-heart-pulse-fill text-amber-500 text-xl"></i>
+                  <h3 class="text-lg font-bold text-white mb-0">
+                    Cardio HIIT & Burn
+                  </h3>
+                </div>
+                <p class="text-slate-400 text-xs leading-relaxed mb-0">
+                  Circuitos metabólicos intensos para optimizar el consumo de
+                  oxígeno y acelerar la pérdida de grasa.
                 </p>
-                <ul class="text-gray-300 space-y-2 mb-6 list-unstyled">
-                  <li>✓ Acceso total 24/7</li>
-                  <li>✓ Clases grupales e HIIT</li>
-                  <li>✓ Evaluación nutricional</li>
-                </ul>
               </div>
-              <button type="button" class="btn btn-danger w-100">
-                Seleccionar
-              </button>
             </div>
           </div>
-          <div class="col-12 col-md-4">
+          <div class="col-md-4">
             <div
-              class="bg-gray-800 border border-gray-700 rounded-xl p-6 shadow-lg hover:scale-105 transition-transform duration-300 h-full d-flex flex-column justify-content-between"
+              class="bg-slate-950 rounded-2xl border border-slate-800 overflow-hidden card-glow transition duration-300 h-100 flex flex-col"
             >
-              <div>
-                <h3 class="text-xl font-bold text-white mb-2">Plan Black</h3>
-                <p class="text-3xl font-extrabold text-red-500 mb-4">
-                  $79<span class="text-sm font-normal text-gray-400">/mes</span>
+              <img
+                src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=600&auto=format&fit=crop"
+                alt="Asesoría Nutricional"
+                class="w-full h-44 object-cover"
+              />
+              <div class="p-5 flex flex-col flex-grow">
+                <div class="flex items-center gap-2 mb-2">
+                  <i class="bi bi-person-arms-up text-amber-500 text-xl"></i>
+                  <h3 class="text-lg font-bold text-white mb-0">
+                    Nutrición Deportiva
+                  </h3>
+                </div>
+                <p class="text-slate-400 text-xs leading-relaxed mb-0">
+                  Cálculo preciso de macronutrientes adaptados a tu gasto
+                  calórico diario para resultados sostenibles.
                 </p>
-                <ul class="text-gray-300 space-y-2 mb-6 list-unstyled">
-                  <li>✓ Todo lo del plan VIP</li>
-                  <li>✓ Entrenador personal</li>
-                  <li>✓ Pase para 1 invitado</li>
-                </ul>
               </div>
-              <button type="button" class="btn btn-outline-danger w-100">
-                Seleccionar
-              </button>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- PASO 5: Formulario Accesible -->
-    <section id="contacto" class="py-20 bg-gray-950">
-      <div class="container max-w-2xl mx-auto">
-        <div
-          class="bg-gray-900 border border-gray-800 p-8 rounded-xl shadow-2xl"
-        >
-          <h2 class="text-2xl font-bold text-white text-center mb-6">
-            INSCRÍBETE AHORA
+    <section id="instalaciones" class="py-16 bg-slate-950">
+      <div class="container">
+        <div class="text-center mb-12">
+          <span
+            class="text-amber-500 text-xs font-bold uppercase tracking-widest"
+            >Instalaciones</span
+          >
+          <h2
+            class="text-2xl sm:text-3xl font-extrabold text-white uppercase mt-1"
+          >
+            Infraestructura Pro
           </h2>
-          <form class="needs-validation" novalidate>
-            <div class="mb-4">
-              <label
-                for="nombreCompleto"
-                class="form-label text-gray-200 font-medium"
-                >Nombre Completo</label
-              >
-              <input
-                type="text"
-                class="form-control bg-gray-800 text-white border-gray-700 focus:bg-gray-800 focus:text-white"
-                id="nombreCompleto"
-                aria-describedby="nombreHelp"
-                required
-              />
-              <div id="nombreHelp" class="form-text text-gray-400">
-                Ingresa tu nombre y apellido.
-              </div>
-              <div class="invalid-feedback">
-                Por favor, escribe tu nombre completo.
-              </div>
-            </div>
-            <div class="mb-4">
-              <label
-                for="emailContacto"
-                class="form-label text-gray-200 font-medium"
-                >Correo Electrónico</label
-              >
-              <input
-                type="email"
-                class="form-control bg-gray-800 text-white border-gray-700 focus:bg-gray-800 focus:text-white is-invalid"
-                id="emailContacto"
-                aria-describedby="emailError"
-                value="correo-invalido"
-                required
-              />
-              <div id="emailError" class="invalid-feedback">
-                Ingresa un correo electrónico válido.
-              </div>
-            </div>
-            <div class="mb-6">
-              <label
-                for="planSelect"
-                class="form-label text-gray-200 font-medium"
-                >Plan de Interés</label
-              >
-              <select
-                class="form-select bg-gray-800 text-white border-gray-700 focus:bg-gray-800 focus:text-white"
-                id="planSelect"
-                aria-label="Selección de plan"
-                required
-              >
-                <option value="" selected disabled>Elige una opción...</option>
-                <option value="1">Plan Básico</option>
-                <option value="2">Plan VIP</option>
-                <option value="3">Plan Black</option>
-              </select>
-            </div>
-            <button
-              type="submit"
-              class="btn btn-danger w-100 py-3 font-semibold shadow-lg hover:bg-red-600"
+        </div>
+        <div class="row g-3">
+          <div class="col-md-6 col-lg-4">
+            <div
+              class="relative overflow-hidden rounded-2xl group border border-slate-800"
             >
-              Enviar Solicitud
-            </button>
-          </form>
+              <img
+                src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?q=80&w=600&auto=format&fit=crop"
+                alt="Zona de Pesas Libres"
+                class="w-full h-56 object-cover group-hover:scale-105 transition duration-500"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"
+              ></div>
+              <span
+                class="absolute bottom-3 left-4 font-bold text-sm text-white flex items-center gap-2"
+                ><i class="bi bi-check-circle-fill text-amber-500"></i> Zona
+                Pesas Libres</span
+              >
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div
+              class="relative overflow-hidden rounded-2xl group border border-slate-800"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1538805060514-97d9cc17730c?q=80&w=600&auto=format&fit=crop"
+                alt="Área Cardiovascular"
+                class="w-full h-56 object-cover group-hover:scale-105 transition duration-500"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"
+              ></div>
+              <span
+                class="absolute bottom-3 left-4 font-bold text-sm text-white flex items-center gap-2"
+                ><i class="bi bi-check-circle-fill text-amber-500"></i> Módulos
+                Cardio</span
+              >
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div
+              class="relative overflow-hidden rounded-2xl group border border-slate-800"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1518310383802-640c2de311b2?q=80&w=600&auto=format&fit=crop"
+                alt="Salón de Clases Grupales"
+                class="w-full h-56 object-cover group-hover:scale-105 transition duration-500"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"
+              ></div>
+              <span
+                class="absolute bottom-3 left-4 font-bold text-sm text-white flex items-center gap-2"
+                ><i class="bi bi-check-circle-fill text-amber-500"></i> Salones
+                Funcionales</span
+              >
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
+    <section id="horarios" class="py-16 bg-slate-900 border-y border-slate-800">
+      <div class="container">
+        <div class="text-center mb-10">
+          <span
+            class="text-amber-500 text-xs font-bold uppercase tracking-widest"
+            >Planificación</span
+          >
+          <h2
+            class="text-2xl sm:text-3xl font-extrabold text-white uppercase mt-1"
+          >
+            Horario de Clases
+          </h2>
+        </div>
+        <div class="table-responsive rounded-2xl border border-slate-800">
+          <table
+            class="table table-dark table-hover mb-0 text-center text-xs sm:text-sm"
+          >
+            <thead
+              class="bg-slate-950 text-amber-500 uppercase font-bold border-b border-slate-800"
+            >
+              <tr>
+                <th class="py-3">Hora</th>
+                <th class="py-3">Lunes</th>
+                <th class="py-3">Miércoles</th>
+                <th class="py-3">Viernes</th>
+              </tr>
+            </thead>
+            <tbody class="align-middle text-slate-300">
+              <tr>
+                <td class="font-bold text-white py-3">06:00 AM</td>
+                <td>
+                  <span
+                    class="badge bg-amber-500/20 text-amber-400 border border-amber-500/30"
+                    >CrossFit</span
+                  >
+                </td>
+                <td>
+                  <span
+                    class="badge bg-amber-500/20 text-amber-400 border border-amber-500/30"
+                    >CrossFit</span
+                  >
+                </td>
+                <td>
+                  <span
+                    class="badge bg-amber-500/20 text-amber-400 border border-amber-500/30"
+                    >CrossFit</span
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td class="font-bold text-white py-3">08:00 AM</td>
+                <td>Power Lifting</td>
+                <td>Spinning HIIT</td>
+                <td>Power Lifting</td>
+              </tr>
+              <tr>
+                <td class="font-bold text-white py-3">06:00 PM</td>
+                <td>Boxing Pro</td>
+                <td>Hipertrofia Guiada</td>
+                <td>Boxing Pro</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="planes" class="py-16 bg-slate-950">
+      <div class="container">
+        <div class="text-center mb-12">
+          <span
+            class="text-amber-500 text-xs font-bold uppercase tracking-widest"
+            >Suscripción</span
+          >
+          <h2
+            class="text-2xl sm:text-3xl font-extrabold text-white uppercase mt-1"
+          >
+            Planes de Membresía
+          </h2>
+        </div>
+        <div class="row g-4 justify-center">
+          <div class="col-lg-4 col-md-6">
+            <div
+              class="bg-slate-900 p-6 rounded-2xl border border-slate-800 text-center flex flex-col h-100"
+            >
+              <h3 class="text-base font-bold text-slate-300 uppercase mb-1">
+                Básico
+              </h3>
+              <div class="text-3xl font-black text-white mb-4">
+                S/ 99
+                <span class="text-xs font-normal text-slate-400">/ mes</span>
+              </div>
+              <ul
+                class="text-slate-400 text-xs space-y-2.5 mb-6 text-left flex-grow"
+              >
+                <li class="flex items-center gap-2">
+                  <i class="bi bi-check2 text-amber-500"></i> Acceso ilimitado
+                  zona pesas
+                </li>
+                <li class="flex items-center gap-2">
+                  <i class="bi bi-check2 text-amber-500"></i> Uso de casilleros
+                </li>
+                <li class="flex items-center gap-2 text-slate-600">
+                  <i class="bi bi-x text-slate-600"></i> Sin clases dirigidas
+                </li>
+              </ul>
+              <a
+                href="#contacto"
+                class="btn btn-outline-warning w-100 font-bold uppercase py-2.5 text-xs border-amber-500 text-amber-500 hover:bg-amber-500 hover:text-slate-950 rounded-xl"
+                >Elegir Plan</a
+              >
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div
+              class="bg-slate-900 p-6 rounded-2xl border-2 border-amber-500 text-center flex flex-col h-100 relative shadow-xl shadow-amber-500/10"
+            >
+              <span
+                class="bg-amber-500 text-slate-950 font-black text-[10px] uppercase px-3 py-0.5 rounded-full absolute -top-3 left-1/2 -translate-x-1/2"
+                >Recomendado</span
+              >
+              <h3 class="text-base font-bold text-amber-500 uppercase mb-1">
+                PRO PULSE
+              </h3>
+              <div class="text-3xl font-black text-white mb-4">
+                S/ 169
+                <span class="text-xs font-normal text-slate-400">/ mes</span>
+              </div>
+              <ul
+                class="text-slate-400 text-xs space-y-2.5 mb-6 text-left flex-grow"
+              >
+                <li class="flex items-center gap-2">
+                  <i class="bi bi-check2 text-amber-500"></i> Acceso 24/7 libre
+                </li>
+                <li class="flex items-center gap-2">
+                  <i class="bi bi-check2 text-amber-500"></i> Clases dirigidas
+                  ilimitadas
+                </li>
+                <li class="flex items-center gap-2">
+                  <i class="bi bi-check2 text-amber-500"></i> Diagnóstico
+                  Nutricional mensual
+                </li>
+              </ul>
+              <a
+                href="#contacto"
+                class="btn btn-warning w-100 font-bold uppercase py-2.5 text-xs bg-amber-500 text-slate-950 border-0 hover:bg-amber-400 rounded-xl"
+                >Elegir Plan Pro</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="testimonios"
+      class="py-16 bg-slate-900 border-t border-slate-800"
+    >
+      <div class="container">
+        <div class="text-center mb-12">
+          <span
+            class="text-amber-500 text-xs font-bold uppercase tracking-widest"
+            >Opiniones</span
+          >
+          <h2
+            class="text-2xl sm:text-3xl font-extrabold text-white uppercase mt-1"
+          >
+            Atletas Satisfechos
+          </h2>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div
+              class="bg-slate-950 p-6 rounded-2xl border border-slate-800 h-100 flex flex-col justify-between"
+            >
+              <div>
+                <div class="flex gap-1 text-amber-500 mb-3 text-xs">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i
+                  ><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i
+                  ><i class="bi bi-star-fill"></i>
+                </div>
+                <p class="text-slate-300 text-xs italic mb-4">
+                  "El mejor ambiente de entrenamiento. Las máquinas de pesas
+                  libres son de nivel profesional y los coaches realmente te
+                  acompañan."
+                </p>
+              </div>
+              <div class="flex items-center gap-3">
+                <img
+                  src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=100&auto=format&fit=crop"
+                  alt="Usuario"
+                  class="w-10 h-10 rounded-full object-cover border border-amber-500"
+                />
+                <div>
+                  <h4 class="text-xs font-bold text-white mb-0">
+                    Camila Mendoza
+                  </h4>
+                  <span class="text-[10px] text-slate-500"
+                    >Miembro desde 2024</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div
+              class="bg-slate-950 p-6 rounded-2xl border border-slate-800 h-100 flex flex-col justify-between"
+            >
+              <div>
+                <div class="flex gap-1 text-amber-500 mb-3 text-xs">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i
+                  ><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i
+                  ><i class="bi bi-star-fill"></i>
+                </div>
+                <p class="text-slate-300 text-xs italic mb-4">
+                  "Logré aumentar 6kg de masa muscular en 5 meses gracias al
+                  plan combinado de nutrición y las clases de powerlifting."
+                </p>
+              </div>
+              <div class="flex items-center gap-3">
+                <img
+                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=100&auto=format&fit=crop"
+                  alt="Usuario"
+                  class="w-10 h-10 rounded-full object-cover border border-amber-500"
+                />
+                <div>
+                  <h4 class="text-xs font-bold text-white mb-0">Mateo Silva</h4>
+                  <span class="text-[10px] text-slate-500"
+                    >Atleta Plan Pro</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div
+              class="bg-slate-950 p-6 rounded-2xl border border-slate-800 h-100 flex flex-col justify-between"
+            >
+              <div>
+                <div class="flex gap-1 text-amber-500 mb-3 text-xs">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i
+                  ><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i
+                  ><i class="bi bi-star-fill"></i>
+                </div>
+                <p class="text-slate-300 text-xs italic mb-4">
+                  "La flexibilidad de horario 24/7 y la limpieza constante de
+                  las salas hacen que valga totalmente la pena la membresía."
+                </p>
+              </div>
+              <div class="flex items-center gap-3">
+                <img
+                  src="https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=100&auto=format&fit=crop"
+                  alt="Usuario"
+                  class="w-10 h-10 rounded-full object-cover border border-amber-500"
+                />
+                <div>
+                  <h4 class="text-xs font-bold text-white mb-0">
+                    Valeria Paredes
+                  </h4>
+                  <span class="text-[10px] text-slate-500">Miembro Activo</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" class="py-16 bg-slate-950">
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-lg-6">
+            <span
+              class="text-amber-500 text-xs font-bold uppercase tracking-widest"
+              >Inscripción</span
+            >
+            <h2
+              class="text-2xl sm:text-3xl font-extrabold text-white uppercase mt-1 mb-4"
+            >
+              Solicita tu Clase de Prueba
+            </h2>
+            <form class="space-y-3">
+              <div class="row g-2">
+                <div class="col-md-6">
+                  <input
+                    type="text"
+                    class="form-control bg-slate-900 border-slate-800 text-white text-xs py-3 rounded-xl focus:border-amber-500 focus:bg-slate-900"
+                    placeholder="Nombre completo"
+                    required
+                  />
+                </div>
+                <div class="col-md-6">
+                  <input
+                    type="email"
+                    class="form-control bg-slate-900 border-slate-800 text-white text-xs py-3 rounded-xl focus:border-amber-500 focus:bg-slate-900"
+                    placeholder="Correo electrónico"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="row g-2">
+                <div class="col-md-6">
+                  <input
+                    type="tel"
+                    class="form-control bg-slate-900 border-slate-800 text-white text-xs py-3 rounded-xl focus:border-amber-500 focus:bg-slate-900"
+                    placeholder="Teléfono / WhatsApp"
+                  />
+                </div>
+                <div class="col-md-6">
+                  <select
+                    class="form-select bg-slate-900 border-slate-800 text-slate-300 text-xs py-3 rounded-xl focus:border-amber-500 focus:bg-slate-900"
+                  >
+                    <option selected>Plan de Interés</option>
+                    <option value="1">Plan Básico (S/ 99)</option>
+                    <option value="2">Plan PRO PULSE (S/ 169)</option>
+                  </select>
+                </div>
+              </div>
+              <textarea
+                class="form-control bg-slate-900 border-slate-800 text-white text-xs py-3 rounded-xl focus:border-amber-500 focus:bg-slate-900"
+                rows="3"
+                placeholder="¿Tienes algún objetivo específico? (Ej: Ganar masa, bajar grasa)"
+              ></textarea>
+              <button
+                type="submit"
+                class="btn btn-warning w-100 font-bold uppercase py-3 text-xs bg-amber-500 text-slate-950 border-0 hover:bg-amber-400 rounded-xl flex items-center justify-center gap-2"
+              >
+                <i class="bi bi-send-fill"></i> Enviar Solicitud
+              </button>
+            </form>
+          </div>
+          <div class="col-lg-6">
+            <span
+              class="text-amber-500 text-xs font-bold uppercase tracking-widest"
+              >Sede Principal</span
+            >
+            <h2
+              class="text-2xl sm:text-3xl font-extrabold text-white uppercase mt-1 mb-4"
+            >
+              Visítanos
+            </h2>
+            <div
+              class="rounded-2xl overflow-hidden border border-slate-800 h-64 mb-4"
+            >
+              <iframe
+                class="w-full h-full"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.953835682855!2d-77.0315!3d-12.0863!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c8c5c5c5c5c5%3A0x5c5c5c5c5c5c5c5c!2sAv.%20Arequipa%2C%20Lima!5e0!3m2!1ses!2spe!4v1620000000000!5m2!1ses!2spe"
+                allowfullscreen=""
+                loading="lazy"
+              ></iframe>
+            </div>
+            <div class="grid grid-cols-2 gap-3 text-xs text-slate-400">
+              <div class="flex items-center gap-2">
+                <i class="bi bi-geo-alt-fill text-amber-500"></i> Av. Arequipa
+                2450, Lima
+              </div>
+              <div class="flex items-center gap-2">
+                <i class="bi bi-telephone-fill text-amber-500"></i> +51 987 654
+                321
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="py-16 bg-slate-900 border-t border-slate-800">
+      <div class="container max-w-3xl">
+        <div class="text-center mb-10">
+          <span
+            class="text-amber-500 text-xs font-bold uppercase tracking-widest"
+            >Dudas Frecuentes</span
+          >
+          <h2
+            class="text-2xl sm:text-3xl font-extrabold text-white uppercase mt-1"
+          >
+            Preguntas Frecuentes
+          </h2>
+        </div>
+        <div class="accordion accordion-flush" id="faqAccordion">
+          <div
+            class="accordion-item bg-slate-950 border border-slate-800 rounded-xl mb-3 overflow-hidden"
+          >
+            <h3 class="accordion-header">
+              <button
+                class="accordion-button collapsed bg-slate-950 text-white font-bold text-sm shadow-none py-3"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#faq1"
+              >
+                ¿Necesito experiencia previa para inscribirme?
+              </button>
+            </h3>
+            <div
+              id="faq1"
+              class="accordion-collapse collapse"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body text-slate-400 text-xs pt-0">
+                No. Contamos con evaluación inicial donde un entrenador diseña
+                tu rutina según tu nivel actual.
+              </div>
+            </div>
+          </div>
+          <div
+            class="accordion-item bg-slate-950 border border-slate-800 rounded-xl mb-3 overflow-hidden"
+          >
+            <h3 class="accordion-header">
+              <button
+                class="accordion-button collapsed bg-slate-950 text-white font-bold text-sm shadow-none py-3"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#faq2"
+              >
+                ¿Cuáles son los métodos de pago aceptados?
+              </button>
+            </h3>
+            <div
+              id="faq2"
+              class="accordion-collapse collapse"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body text-slate-400 text-xs pt-0">
+                Aceptamos Yape, Plin, transferencias bancarias directas y
+                tarjetas de crédito o débito.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer
+      class="bg-slate-950 border-t border-slate-800 py-8 text-slate-400 text-xs"
+    >
+      <div class="container text-center">
+        <p class="font-bold text-white mb-1">Iron Pulse Gym © 2026</p>
+        <p class="mb-0 text-slate-500">
+          Proyecto académico universitario de Desarrollo Web Responsive.
+        </p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
